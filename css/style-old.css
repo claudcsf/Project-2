@@ -1,0 +1,224 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 2em;
+    color: #363636;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        ". nav ."
+        "hd hd hd"
+        ". sv ."
+        ". tm ."
+        ". pf ."
+        ". ct ."
+        "ft ft ft"
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+
+}
+
+
+/* CSS SCROLL SNAPPING */
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+
+/* NAVIGATION */
+
+#navbar {
+    display: fixed;
+    flex-wrap: wrap;
+    top: 0;
+    z-index: 100;
+    width: 75%;
+    grid-area: nav;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-item {
+    text-decoration: none;
+    height: 100%;
+    padding: 2.5em 4em;
+}
+
+.menu-item:hover {
+    background-color: #9EAEFF40;
+}
+
+.menu-item a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #363636;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+/* ON WHEN ACTIVE
+
+#mservices {
+    border-bottom: 0.5em solid #FBE4E4;
+}
+
+#mteam {
+    border-bottom: 0.5em solid #FFB7B7;
+}
+
+#mportfolio {
+    border-bottom: 0.5em solid #FF7777;
+}
+
+#mcontact {
+    border-bottom: 0.5em solid #FF4242;
+}
+
+*/
+
+/* HEADER */
+
+header {
+    height: 100vh;
+    scroll-snap-align: start;
+    color: #363636;
+    grid-area: hd;
+    justify-content: center;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    margin: auto;
+
+}
+
+#hero-content {
+    margin: auto;
+}
+
+.btn-cta {
+    margin: 3em 0;
+    padding: 0.5em 2em;
+    border: 3px solid #363636;
+    font-size: 2em;
+    font-weight: 500;
+    color: #363636;
+}
+
+#btn-down {
+    margin: 0 auto;
+}
+
+/* SERVICES */
+
+#services {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    grid-area: sv;
+}
+
+.content {
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: center;*/
+    width: 65%;
+    margin: auto;
+}
+
+.textbox {
+    /*border: 3px solid #363636;*/
+    padding: 2em;
+}
+
+.textbox-title {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+/* TEAM */
+
+#team {
+    height: 100vh;
+    scroll-snap-align: start;
+    grid-area: tm;
+}
+
+.team-gallery {
+    display: flex;
+    height: 80vh;
+}
+
+.member {
+    width: 200px;
+    padding: 1em;
+}
+
+.name {
+    font-weight: 500;
+}
+
+.title {
+    font-weight: 300;
+    color: #C2BDBD;
+    font-size: 0.8;
+}
+
+.qbox {
+    margin: 0.5em auto;
+    display: flex;
+}
+
+.qicon {
+    padding-right: 0.8em;
+}
+
+.quote {
+    margin-left: auto;
+    line-height: normal;
+    font-size: 0.8;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    grid-area: pf;
+}
+
+#contact {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    grid-area: ct;
+}
+
+/* FOOTER */
+
+footer {
+    background: #363636;
+    height: 10vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    grid-area: ft;
+}

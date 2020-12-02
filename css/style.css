@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html, body {
+    scroll-snap-type: y mandatory;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu-item {
+    text-decoration: none;
+    border-bottom: 2px solid #168862;
+    padding: 3em;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+header {
+    background-color: rgb(187, 247, 227);
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.header-flex {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: flex-end;
+}
+
+.hero-content {
+    text-align: center;
+    height: 50%;
+}
+
+.btn-cta {
+    margin-top: 2em;
+}
+
+#down-arrow {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.section1 {
+    background-color: darkcyan;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.flex-section {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.item1{
+    flex-basis: 40%;
+    height: 30%;
+    margin: 2em;
+    padding: 2em;
+}
+
+.section2 {
+    background-color: darkgoldenrod;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.member {
+    padding: 1em;
+    line-height: normal;
+    margin: 1em;
+    display: inline;
+}
+
+.qbox {
+    width: 300px;
+    margin: 0.5em 0;
+    display: flex;
+}
+
+.qicon {
+    padding-right: 0.8em;
+}
+
+.quote {
+    margin-left: auto;
+    line-height: normal;
+    font-size: 0.8;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section3 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.slide {
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+form {
+    max-width: 600px;
+}
+input, select, textarea, label {
+    width: 100%;
+    padding: 0.5em;
+    margin: 1em 0;
+    box-sizing: border-box;
+}
+label {
+    position: relative;
+    left: -0.5em;
+}
+
+footer {
+    height: 10vh;
+    scroll-snap-align: start;
+}
+
+.logo-footer {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#myBtn {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    bottom: 2em;
+    cursor: pointer;
+    right: 1em;
+}
+
+@media screen and (max-width: 992px) {
+    .item1 {
+        flex-basis: 100%;
+        height: fit-content;
+        margin: 1em;
+    }
+
+    .member {
+      display: flex;
+    }
+
+    .member-photo {
+        margin-right: 2em;
+    }
+
+    #menu {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+}
